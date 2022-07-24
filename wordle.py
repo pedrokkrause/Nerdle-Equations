@@ -61,7 +61,6 @@ if __name__ == "__main__":
     with open("PathToEquationOrWordList.txt") as file:
         for line in file:
             palavras.append(line.rstrip())
-    print(searchW(palavras))
     print(len(palavras))
     while True:
         ans1 = input("What you inserted: ")
