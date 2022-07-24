@@ -2,23 +2,25 @@ from math import log2
 from tqdm import tqdm
 from collections import defaultdict
 from time import sleep
+from copy import deepcopy
 
 def genmaskW(expression,correct):
-    mask = ''
+    mask = ['N']*len(expression)
     count = defaultdict(lambda: 0)
-    for i,x in enumerate(expression):
+    for i, x in enumerate(expression):
         if x == correct[i]:
-            mask += '2'
+            mask[i] = '2'
             count[x] += 1
-        elif x not in correct:
-            mask += '0'
-        else:
+    for i,x in enumerate(expression):
+        if x not in correct:
+            mask[i] = '0'
+        elif x != correct[i]:
             if count[x] < correct.count(x):
-                mask += '1'
+                mask[i] = '1'
                 count[x] += 1
             else:
-                mask += '0'
-    return(mask)
+                mask[i] = '0'
+    return(''.join(mask))
 
 def checkmaskW(mask,expression,correct):
     if mask == genmaskW(expression,correct):
@@ -51,7 +53,7 @@ def searchW(dictionary,possible=None):
         for mask in allmaskss:
             prob = allmaskss[mask]/length
             localexp += -prob*log2(prob)
-        if localexp > expected:
+        if localexp > expected or (localexp >= expected and expression in possible):
             best = expression
             expected = localexp
             if len(possible) > 10000:
@@ -59,20 +61,24 @@ def searchW(dictionary,possible=None):
     return([best,expected,best in possible])
 
 if __name__ == "__main__":
-    palavras = []
-    with open("PathToEquationOrWordList.txt") as file:
+    words = []
+    with open("PathToTextFile") as file:
         for line in file:
-            palavras.append(line.rstrip())
-    #print(searchW(palavras))
-    print(len(palavras))
-    palavrasPossiveis = deepcopy(palavras)
+            words.append(line.rstrip())
+    possiblewords = deepcopy(words)
+    print("Number of possible words:",len(possiblewords))
+    print(searchW(words,possiblewords))
+    best = ['48-32=16']
     while True:
-        ans1 = input("What you inserted: ")
+        ans1 = input("What you inserted (enter 'b' if it was the best choice): ")
         ans2 = input("Mask: ")
-        palavrasPossiveis = filtermaskW(ans2,ans1,palavrasPossiveis)
-        print(len(palavrasPossiveis))
-        print(searchW(palavras,palavrasPossiveis))
-        if len(palavrasPossiveis) < 7:
-            print(palavrasPossiveis)
+        if ans1 == 'b':
+            ans1 = best[0]
+        possiblewords = filtermaskW(ans2,ans1,possiblewords)
+        print("Number of possible words:",len(possiblewords))
+        best = searchW(words,possiblewords)
+        print("Best choice:",best[0])
+        print("Average information:",best[1])
+        if len(possiblewords) < 7:
+            print("Possible words:",possiblewords)
         print("============")
-
