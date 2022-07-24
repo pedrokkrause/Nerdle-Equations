@@ -13,4 +13,4 @@ Here are the best first choices considering each file:
 | MiniRaw           |     1=+3-2    |       6.5558        |
 | MiniRestricted    |    2*8=16     |       5.7466        |
 | ClassicRaw        | To be checked |    To be checked    |
-| ClassicRestricted | To be checked |    To be checked    |
+| ClassicRestricted |    48-32=16   |        9.7754       |
