@@ -1,4 +1,4 @@
-# Nerdle-Equations
+# All Nerdle Equations and a Solver
 All the possible equations for the Nerdle game and a solver.
 
 - The 'Raw' files contains all the equations that Python evaluates as True, which spans almost all possible equations that can be inserted in the Nerdle game, with the exception of numbers that contain leading zeroes.
