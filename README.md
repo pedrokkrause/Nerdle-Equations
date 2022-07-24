@@ -11,9 +11,9 @@ Here are the best first choices considering each file:
 
 | File              | Best choice   | Average information |
 | ----------------- | ------------- | ------------------- |
-| MiniRaw           |     1=+3-2    |       6.55582       |
-| Mini4Op           |    4=10-6     |       6.21539       |
+| MiniRaw           |     1=+3-2    |       6.5558        |
+| Mini4Op           |    4=10-6     |       6.2154        |
 | MiniRestricted    |    4*7=28     |       5.8238        |
 | ClassicRaw        | To be checked |    To be checked    |
 | Classic4Op        | To be checked |    To be checked    |
-| ClassicRestricted |   1*42/7=6    |       8.67521       |
+| ClassicRestricted |   1*42/7=6    |       8.6752        |
