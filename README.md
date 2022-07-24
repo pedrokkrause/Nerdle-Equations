@@ -9,11 +9,11 @@ All the possible equations for the Nerdle game and a solver.
 
 Here are the best first choices considering each file:
 
-| File              | Best choice   |
-| ----------------- | ------------- |
-| MiniRaw           | To be checked |
-| Mini4Op           | To be checked |
-| MiniRestricted    | To be checked |
-| ClassicRaw        | To be checked |
-| Classic4Op        | To be checked |
-| ClassicRestricted | To be checked |
+| File              | Best choice   | Average information |
+| ----------------- | ------------- | ------------------- |
+| MiniRaw           |     1=+3-2    |       6.55582       |
+| Mini4Op           |    4=10-6     |       6.21539       |
+| MiniRestricted    |    4*7=28     |       5.8238        |
+| ClassicRaw        | To be checked |    To be checked    |
+| Classic4Op        | To be checked |    To be checked    |
+| ClassicRestricted |   1*42/7=6    |       8.67521       |
