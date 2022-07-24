@@ -67,7 +67,7 @@ if __name__ == "__main__":
             words.append(line.rstrip())
     possiblewords = deepcopy(words)
     print("Number of possible words:",len(possiblewords))
-    print(searchW(words,possiblewords))
+    #print(searchW(words,possiblewords))
     best = ['48-32=16']
     while True:
         ans1 = input("What you inserted (enter 'b' if it was the best choice): ")
