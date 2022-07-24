@@ -40,6 +40,8 @@ def filtermaskW(mask,expression,dictionary):
 def searchW(dictionary,possible=None):
     if possible==None:
         possible = dictionary
+    if len(possible) == 1 or len(dictionary) == 1:
+        return([possible[0],0,possible[0] in dictionary])
     best = None
     expected = 0
     length = len(possible)
@@ -61,13 +63,16 @@ if __name__ == "__main__":
     with open("PathToEquationOrWordList.txt") as file:
         for line in file:
             palavras.append(line.rstrip())
+    #print(searchW(palavras))
     print(len(palavras))
+    palavrasPossiveis = deepcopy(palavras)
     while True:
         ans1 = input("What you inserted: ")
         ans2 = input("Mask: ")
-        palavrasPossiveis = filtermaskW(ans2,ans1,palavras)
-        print(len(palavras))
+        palavrasPossiveis = filtermaskW(ans2,ans1,palavrasPossiveis)
+        print(len(palavrasPossiveis))
         print(searchW(palavras,palavrasPossiveis))
-        if len(palavras) < 7:
-            print(palavras)
+        if len(palavrasPossiveis) < 7:
+            print(palavrasPossiveis)
         print("============")
+
