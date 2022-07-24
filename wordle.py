@@ -3,14 +3,6 @@ from tqdm import tqdm
 from collections import defaultdict
 from time import sleep
 
-#['12-3*4=0', 9.090238788869138]
-#['1/3*+6=2', 9.003292073160805]
-#['1=+2*3-5', 9.20670980583069]
-# 29412/291610 + 11000
-#Mini ['1=-2+3', 6.385954558871319]
-# Nerdle8Correct --> 30000/101459
-
-
 def genmaskW(expression,correct):
     mask = ''
     count = defaultdict(lambda: 0)
@@ -66,7 +58,7 @@ def searchW(dictionary,possible=None):
 
 if __name__ == "__main__":
     palavras = []
-    with open("C:/Users/ckmer/PycharmProjects/filtropalavras/Nerdle/NerdleClassicRestricted.txt") as file:
+    with open("PathToEquationOrWordList.txt") as file:
         for line in file:
             palavras.append(line.rstrip())
     print(searchW(palavras))
