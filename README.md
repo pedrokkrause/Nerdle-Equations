@@ -14,4 +14,6 @@ Here are the best first choices considering each file:
 | MiniRestricted    |    4*7=28     |       5.8203        |
 | ClassicRaw        | To be checked |    To be checked    |
 | ClassicRestricted |    48-32=16   |        9.7751       |
-| Maxi              | To be checked |    To be checked    |
+| Maxi              |   58+6-21=43* |      12.7156        |
+
+*Best found _so far_
