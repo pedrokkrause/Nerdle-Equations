@@ -46,8 +46,6 @@ Function that generates all possible equations. This function needs to be run
 2 times: one with start=numbers2 and opened_parenthesis=0 and another with
 start=['('] and opened_parenthesis=1
 '''
-
-
 def allequations(eq='', length=10, opened_parenthesis=0, start=numbers2):
     global count
     for sym in possiblesymbols(eq, opened_parenthesis, length, start):
