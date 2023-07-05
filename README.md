@@ -13,7 +13,7 @@ Here are the best first choices considering each file:
 | ----------------- | ------------- | ------------------- | ------------- | ------------------- |
 | MiniRaw           |     1=+3-2    |       6.5558        |     -    |       -        |
 | MiniRestricted    |    4*7=28     |       5.8203        |     -    |       -        |
-| ClassicRaw        | To be checked |    To be checked    |     -    |       -        |
+| ClassicRaw        | - |    -    |     -    |       -        |
 | ClassicRestricted |    48-32=16   |        9.7751       |     30/2-8=7 and 5*9+1=46    |       13.1561        |
 | Maxi              |   75+2-31=46\* |      12.7317        |     3²+(0/7)=9 and 2*61-4³=58\*    |       18.1243        |
 
