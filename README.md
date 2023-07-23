@@ -38,7 +38,7 @@ Then the logic for *Last symbol (LS) -> Symbols that can come after* is
 - $\text{LS} \in D \rightarrow D \cup O \cup E$
 - $\text{LS} \in O \rightarrow D^* \cup [(]$
 - $\text{LS} \in E \rightarrow O$
-- $\text{LS} = ( \rightarrow D^* \cup [(]$
+- $\text{LS} = ( \rightarrow D^* \cup [(,-]$
 - $\text{LS} = ) \rightarrow O \cup E$
 
 The set of symbols that can come after the LS can also include ) if there are opened parenthesis, except if LS is (. 
