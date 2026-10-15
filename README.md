@@ -88,4 +88,4 @@ For human play, a popular strategy is to open with two pre-planned equations tha
 * **Classic Nerdle:** 15 total symbols (`0-9`, `+-*/`, `=`) across $2 \times 8 = 16$ tiles.
 * **Maxi Nerdle:** 19 total symbols (`0-9`, `+-*/()²³`, `=`) across $2 \times 10 = 20$ tiles.
 
-`pair_finder.py`[cite: 1, 2] filters the equations down to those with all unique characters, groups them by their non-`=` character bitmask, pairs each mask with its exact bitwise complement in $O(1)$ time, and computes the exact joint Shannon entropy for every valid pair.
+`pair_finder.py`[cite: 1, 2] filters the equations down to those with all unique characters, groups them by their non-`=` character bitmask, pairs each mask with its exact bitwise complement in $O(1)$ time, and computes the joint Shannon entropy for every valid pair.
