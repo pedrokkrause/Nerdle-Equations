@@ -53,8 +53,8 @@ Generating equations by brute-forcing all possible character combinations is fea
 
 *(Note: Classic Nerdle omits parentheses and exponents $E$. In Maxi Nerdle, `)` is also allowed whenever there is an unclosed `(` and $LS \notin O \cup [(]$.)*
 
-### On-the-Fly 3-Layer Evaluation & Pruning[cite: 3]
-Rather than parsing completed strings from scratch at the leaves of the search tree, the generators maintain the running value of the expression across three precedence layers during the DFS[cite: 3]:
+### On-the-Fly 3-Layer Evaluation & Pruning
+Rather than parsing completed strings from scratch at the leaves of the search tree, the generators maintain the running value of the expression across three precedence layers during the DFS:
 
 $$\text{Value} = \mathtt{acc}_{\mathtt{expr}} \pm (\mathtt{acc}_{\mathtt{term}} \times/\div \mathtt{curr}_{\mathtt{val}})$$
 
